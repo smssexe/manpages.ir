@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Available Commands</h2>
+<ul>
+    {% for cmd in commands %}
+        <li><a href="/man/{{ cmd }}">{{ cmd }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
