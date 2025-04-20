@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Search</h2>
+
+<form method="get" action="/search">
+    <input type="text" name="q" value="{{ query }}" placeholder="Search man pages...">
+    <button type="submit">Search</button>
+</form>
+
+{% if query %}
+    <h3>Results for "{{ query }}"</h3>
+    {% if results %}
+        <ul>
+        {% for r in results %}
+            <li><a href="/man/{{ r }}">{{ r }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}
