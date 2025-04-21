@@ -1,0 +1,29 @@
+TRACE-CMD-OPTIONS(1)						       libtracefs Manual						  TRACE-CMD-OPTIONS(1)
+
+NAME
+       trace-cmd-options - list available options from trace-cmd plugins
+
+SYNOPSIS
+       trace-cmd options
+
+DESCRIPTION
+       The trace-cmd(1) options command will examine all the trace-cmd plugins that are used by trace-cmd report(1) and list them.
+
+SEE ALSO
+       trace-cmd(1), trace-cmd-record(1), trace-cmd-start(1), trace-cmd-stop(1), trace-cmd-extract(1), trace-cmd-reset(1), trace-cmd-split(1),
+       trace-cmd-list(1), trace-cmd-listen(1)
+
+AUTHOR
+       Written by Steven Rostedt, <rostedt@goodmis.org[1]>
+
+RESOURCES
+       https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/
+
+COPYING
+       Copyright (C) 2011 Red Hat, Inc. Free use of this software is granted under the terms of the GNU Public License (GPL).
+
+NOTES
+	1. rostedt@goodmis.org
+	   mailto:rostedt@goodmis.org
+
+libtracefs								  04/08/2024							  TRACE-CMD-OPTIONS(1)
