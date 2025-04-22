@@ -1,31 +1,30 @@
-# manpages.ir 🐧📚
+# manpages.ir
 
 A minimal, nerdy web interface for exploring Linux man pages — in Markdown.
 
-## 📦 What is this?
+## What is this?
 
-This is a lightweight Flask-based web app that serves man pages in a readable, searchable Markdown format.
+A lightweight Flask-based web app that serves Linux man pages in a readable, searchable Markdown format.
 
-### Features:
+### Features
 
-- 🔍 **Search** manpages by name or content
-- 📖 View Markdown-rendered manpages
-- ✍️ Planned sections:
-  - `daily tips`: random or curated command-line tricks
-  - `linux exams`: a study guide-like section for sysadmins and power users
-- 🎨 Minimal UI with terminal-like vibes (on purpose)
+- **Search** manpages by name or content
+- **Markdown-rendered** manual pages
+- **Future sections** (under development):
+  - `daily tips`: random/cool terminal tricks
+  - `linux exams`: CLI study materials & practice
+- **Minimal UI** — terminal-ish and intentionally plain
 
-## 🚀 How to run it
-
-### 🐳 With Docker:
+## Run with Docker
 
 ```bash
 docker run -p 5000:5000 smssexe/manpages.ir:latest
 ```
 
-Then open your browser:
+Then visit:
 http://localhost:5000
-🛠️ From source:
+
+## Run from source:
 
 ```bash
 git clone https://github.com/smssexe/manpages.ir.git
@@ -34,32 +33,33 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Make sure you have your templates/ and data/manpages/ folders in place.
-📁 Project structure
+Make sure you have the templates/ and data/manpages/ folders.
+
+## Project structure:
+
+```bash
 .
-├── app.py # Main Flask app
+├── app.py              # Flask app
 ├── requirements.txt
-├── templates/ # HTML templates
+├── templates/          # HTML templates
 ├── data/
-│ └── manpages/ # Your Markdown manpages live here
-└── Dockerfile # For containerized deployment
+│   └── manpages/       # Markdown files
+└── Dockerfile
+```
 
-💭 Philosophy
-This site is made for the nerds. It’s intentionally minimal, almost retro.
-The idea is to keep things fast, clean, and terminal-friendly — no JavaScript madness, no fancy animations.
+## Philosophy:
 
-🛣️ Roadmap
+This project is made for terminal nerds. It's intentionally minimal.
+No frontend frameworks, no JS clutter — just plain old Flask, HTML, and Markdown.
+
+## Roadmap:
+
 Markdown-based man page rendering
+Basic search
+Daily tips section
+Linux exams section
+Minimal responsive layout (still terminal vibes)
 
-Basic search functionality
+## License:
 
-daily tips section
-
-linux exams module
-
-    Responsive layout (but still nerdy)
-
-☕ Contributing
-
-Pull requests welcome. Make it better, cleaner, or more Unixy.
-📜 License
+GPLv3
