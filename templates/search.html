@@ -13,7 +13,7 @@
     {% if results %}
         <ul>
         {% for r in results %}
-            <li><a href="/man/{{ r }}">{{ r }}</a></li>
+            <li><a href="/man/{{ r }}?q={{ query }}">{{ r }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
