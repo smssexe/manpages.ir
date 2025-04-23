@@ -23,6 +23,17 @@ def search():
                         results.append(fname.replace(".md", ""))
     return render_template("search.html", query=query, results=results)
 
+@app.route('/commands')
+def command_list():
+    manpages_dir = os.path.join("data", "manpages")
+    commands = []
+    for f in os.listdir(manpages_dir):
+        full_path = os.path.join(manpages_dir, f)
+        if os.path.isfile(full_path) and f.endswith(".md"):
+            commands.append(f.replace(".md", ""))
+    commands.sort()
+    return render_template("commands.html", commands=commands)
+
 @app.route('/man/<command>')
 def man_page(command):
     query = request.args.get("q", "").strip().lower()
