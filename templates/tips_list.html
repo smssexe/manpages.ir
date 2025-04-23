@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Daily Tips</h2>
+
+<p>تعداد فایل: {{ dates | length }}</p>
+
+<ul>
+    {% for d in dates %}
+        <li><a href="/tips/{{ d }}">{{ d }}</a></li>
+    {% endfor %}
+</ul>
+
+{% if not dates %}
+    <p>No tips added yet.</p>
+{% endif %}
+{% endblock %}

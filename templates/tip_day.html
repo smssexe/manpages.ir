@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Tips for {{ date }}</h2>
+<div>{{ content | safe }}</div>
+<a href="/tips">← Back to all tips</a>
+{% endblock %}
