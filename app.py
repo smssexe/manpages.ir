@@ -34,6 +34,30 @@ def command_list():
     commands.sort()
     return render_template("commands.html", commands=commands)
 
+@app.route('/tips')
+def tips_list():
+    tips_dir = os.path.join("data", "tips")
+    if not os.path.isdir(tips_dir):
+        return render_template("tips_list.html", dates=[])
+    
+    dates = []
+    for fname in os.listdir(tips_dir):
+        if fname.endswith(".md"):
+            dates.append(fname.replace(".md", ""))
+    dates.sort(reverse=True)  # جدیدترها اول
+    return render_template("tips_list.html", dates=dates)
+
+@app.route('/tips/<date>')
+def tip_for_date(date):
+    filepath = os.path.join("data", "tips", f"{date}.md")
+    if not os.path.isfile(filepath):
+        abort(404)
+    with open(filepath, encoding="utf-8") as f:
+        content = f.read()
+    import markdown
+    html = markdown.markdown(content)
+    return render_template("tip_day.html", date=date, content=html)
+
 @app.route('/man/<command>')
 def man_page(command):
     query = request.args.get("q", "").strip().lower()
