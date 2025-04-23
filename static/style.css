@@ -1,0 +1,48 @@
+body {
+    background-color: #1e1e1e;
+    color: #c5c5c5;
+    font-family: monospace;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+a {
+    color: #4fc1ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #00ff88;
+}
+
+nav {
+    margin-bottom: 1rem;
+    background-color: #2e2e2e;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+nav a {
+    margin-right: 1rem;
+    color: #9cdcfe;
+}
+
+pre, code {
+    background-color: #2e2e2e;
+    color: #dcdcdc;
+    padding: 1rem;
+    display: block;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+mark {
+    background-color: #ffcc00;
+    color: black;
+    padding: 0 2px;
+    border-radius: 2px;
+}
