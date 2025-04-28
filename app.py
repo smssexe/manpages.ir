@@ -37,15 +37,22 @@ def command_list():
 @app.route('/tips')
 def tips_list():
     tips_dir = os.path.join("data", "tips")
-    if not os.path.isdir(tips_dir):
-        return render_template("tips_list.html", dates=[])
-    
-    dates = []
+    entries = []
     for fname in os.listdir(tips_dir):
         if fname.endswith(".md"):
-            dates.append(fname.replace(".md", ""))
-    dates.sort(reverse=True)  # جدیدترها اول
-    return render_template("tips_list.html", dates=dates)
+            date = fname.replace(".md", "")
+            path = os.path.join(tips_dir, fname)
+            with open(path, encoding="utf-8") as f:
+                lines = f.readlines()
+                tags = ""
+                for line in lines:
+                    if line.lower().startswith("**tags:**"):
+                        tags = line.split(":", 1)[1].strip()
+                        break
+            entries.append({"date": date, "tags": tags})
+    entries.sort(key=lambda x: x["date"], reverse=True)
+    return render_template("tips_list.html", entries=entries)
+
 
 @app.route('/tips/<date>')
 def tip_for_date(date):
@@ -57,6 +64,24 @@ def tip_for_date(date):
     import markdown
     html = markdown.markdown(content)
     return render_template("tip_day.html", date=date, content=html)
+
+@app.route('/tips/search')
+def search_tips():
+    query = request.args.get("q", "").lower()
+    tips_dir = os.path.join("data", "tips")
+    results = []
+
+    if query:
+        for fname in os.listdir(tips_dir):
+            if fname.endswith(".md"):
+                date = fname.replace(".md", "")
+                path = os.path.join(tips_dir, fname)
+                with open(path, encoding="utf-8") as f:
+                    content = f.read().lower()
+                    if query in content:
+                        results.append(date)
+    results.sort(reverse=True)
+    return render_template("tips_search.html", query=query, results=results)
 
 @app.route('/man/<command>')
 def man_page(command):

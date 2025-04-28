@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Search Tips</h2>
+<p>Results for "{{ query }}":</p>
+
+<ul>
+    {% for d in results %}
+        <li><a href="/tips/{{ d }}">{{ d }}</a></li>
+    {% endfor %}
+</ul>
+
+{% if not results %}
+    <p>No matching tips found.</p>
+{% endif %}
+{% endblock %}
