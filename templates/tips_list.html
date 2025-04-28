@@ -3,13 +3,19 @@
 {% block content %}
 <h2>All Daily Tips</h2>
 
+<form method="get" action="/tips/search">
+    <input type="text" name="q" placeholder="Search tips...">
+    <button type="submit">Search</button>
+</form>
+
 <ul>
-    {% for d in dates %}
-        <li><a href="/tips/{{ d }}">{{ d }}</a></li>
+    {% for entry in entries %}
+        <li>
+            <a href="/tips/{{ entry.date }}">{{ entry.date }}</a>
+            {% if entry.tags %}
+                <small>({{ entry.tags }})</small>
+            {% endif %}
+        </li>
     {% endfor %}
 </ul>
-
-{% if not dates %}
-    <p>No tips added yet.</p>
-{% endif %}
 {% endblock %}
