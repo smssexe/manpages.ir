@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, redirect, render_template, request, abort, session, url_for
 import os
+import json
+import random
 import markdown
+from datetime import datetime
 
 app = Flask(__name__)
+app.secret_key = "supersecret"
 
 @app.route('/')
 def index():
@@ -128,6 +132,72 @@ def man_page(command):
     import markdown
     html_content = markdown.markdown(content)
     return render_template("man_md.html", command=command, content=html_content)
+
+
+@app.route("/exams")
+def exams():
+    # List available topics (each .json file in data/exams)
+    topics = [f.replace(".json", "") for f in os.listdir("data/exams") if f.endswith(".json")]
+    return render_template("exam_topics.html", topics=topics)
+
+@app.route("/exams/start")
+def start_exam():
+    topic = request.args.get("topic")
+    if not topic:
+        return redirect(url_for("exams"))
+    path = os.path.join("data", "exams", f"{topic}.json")
+    if not os.path.isfile(path):
+        return "Invalid topic", 404
+    
+    with open(path, encoding="utf-8") as f:
+        questions = json.load(f)
+    
+    selected = random.sample(questions, min(20, len(questions)))
+    session['exam'] = {
+        "topic": topic,
+        "questions": selected,
+        "current": 0,
+        "score": 0,
+        "answers": []
+    }
+    return redirect(url_for("show_question"))
+
+@app.route("/exams/question", methods=["GET", "POST"])
+def show_question():
+    if 'exam' not in session:
+        return redirect(url_for("exams"))
+
+    exam = session['exam']
+    current = exam["current"]
+    questions = exam["questions"]
+
+    if request.method == "POST":
+        selected = request.form.get("answer")
+        correct = questions[current]['answer']
+        exam['answers'].append({
+            "question": questions[current]['question'],
+            "selected": selected,
+            "correct": correct,
+            "explanation": questions[current].get("explanation", "")
+        })
+        if selected == correct:
+            exam['score'] += 1
+        exam['current'] += 1
+        session['exam'] = exam
+        return redirect(url_for("show_question"))
+
+    if current >= len(questions):
+        return redirect(url_for("exam_result"))
+
+    question = questions[current]
+    return render_template("exam_question.html", index=current+1, total=len(questions), question=question)
+
+@app.route("/exams/result")
+def exam_result():
+    if 'exam' not in session:
+        return redirect(url_for("exams"))
+    exam = session.pop('exam')
+    return render_template("exam_result.html", score=exam['score'], total=len(exam['questions']), answers=exam['answers'])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)

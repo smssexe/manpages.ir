@@ -1,0 +1,183 @@
+[
+    {
+      "question": "Which command is used to change file permissions?",
+      "options": ["chmod", "chown", "ls", "rm"],
+      "answer": "chmod",
+      "explanation": "The `chmod` command modifies file permissions."
+    },
+    {
+      "question": "Which command changes file ownership?",
+      "options": ["chmod", "mv", "chown", "cp"],
+      "answer": "chown",
+      "explanation": "`chown` changes the owner and group of a file."
+    },
+    {
+      "question": "Which file stores user account information?",
+      "options": ["/etc/shadow", "/etc/hosts", "/etc/passwd", "/etc/group"],
+      "answer": "/etc/passwd",
+      "explanation": "The `/etc/passwd` file contains basic user account details."
+    },
+    {
+      "question": "Which command locks a user account?",
+      "options": ["passwd -l", "usermod -u", "useradd", "groupmod"],
+      "answer": "passwd -l",
+      "explanation": "`passwd -l username` locks the account by disabling the password."
+    },
+    {
+      "question": "Which command enables a firewall on Ubuntu using UFW?",
+      "options": ["ufw enable", "firewall-cmd", "iptables -A", "ufw allow"],
+      "answer": "ufw enable",
+      "explanation": "`ufw enable` activates the Uncomplicated Firewall."
+    },
+    {
+      "question": "Which user has UID 0?",
+      "options": ["daemon", "nobody", "root", "sys"],
+      "answer": "root",
+      "explanation": "UID 0 is always reserved for the root user."
+    },
+    {
+      "question": "What is the default sudoers file location?",
+      "options": ["/etc/sudo.conf", "/etc/sudoers", "/etc/root", "/etc/admin"],
+      "answer": "/etc/sudoers",
+      "explanation": "`/etc/sudoers` controls sudo privileges."
+    },
+    {
+      "question": "Which command shows active login sessions?",
+      "options": ["who", "id", "users", "lastlog"],
+      "answer": "who",
+      "explanation": "`who` lists users currently logged in."
+    },
+    {
+      "question": "Which file stores encrypted passwords?",
+      "options": ["/etc/passwd", "/etc/shadow", "/etc/group", "/etc/login.defs"],
+      "answer": "/etc/shadow",
+      "explanation": "`/etc/shadow` contains hashed passwords for users."
+    },
+    {
+      "question": "Which tool scans for open ports?",
+      "options": ["nmap", "netstat", "ls", "ping"],
+      "answer": "nmap",
+      "explanation": "`nmap` is a powerful network scanner."
+    },
+    {
+      "question": "What does the command `chmod 700 file` do?",
+      "options": ["Full access for owner only", "No access for anyone", "Read-only for all", "Full access for all"],
+      "answer": "Full access for owner only",
+      "explanation": "Permission 700 gives read/write/execute only to the owner."
+    },
+    {
+      "question": "Which Linux command displays SELinux status?",
+      "options": ["getenforce", "selinux", "lsmod", "auditctl"],
+      "answer": "getenforce",
+      "explanation": "`getenforce` shows if SELinux is enforcing, permissive, or disabled."
+    },
+    {
+      "question": "Which command restricts a user from logging in?",
+      "options": ["usermod -L", "passwd -e", "groupdel", "chage -l"],
+      "answer": "usermod -L",
+      "explanation": "`usermod -L` locks the account (like `passwd -l`)."
+    },
+    {
+      "question": "Which command sets password expiry for a user?",
+      "options": ["chage", "passwd -l", "usermod -d", "shadow"],
+      "answer": "chage",
+      "explanation": "`chage` manages password expiration and aging."
+    },
+    {
+      "question": "What is the main purpose of SSH?",
+      "options": ["Secure remote login", "File compression", "Disk partitioning", "Web hosting"],
+      "answer": "Secure remote login",
+      "explanation": "SSH provides encrypted remote shell access."
+    },
+    {
+      "question": "Which port does SSH use by default?",
+      "options": ["22", "80", "443", "21"],
+      "answer": "22",
+      "explanation": "SSH uses TCP port 22 by default."
+    },
+    {
+      "question": "Which command displays current user ID and groups?",
+      "options": ["id", "whoami", "groups", "users"],
+      "answer": "id",
+      "explanation": "`id` shows the UID, GID and group memberships of a user."
+    },
+    {
+      "question": "Which command allows editing sudoers safely?",
+      "options": ["visudo", "nano /etc/sudoers", "vi /etc/sudoers", "chmod /etc/sudoers"],
+      "answer": "visudo",
+      "explanation": "`visudo` checks syntax to avoid locking out sudo access."
+    },
+    {
+      "question": "Which command is used to ban IPs after failed logins?",
+      "options": ["fail2ban", "iptables", "ufw", "auditd"],
+      "answer": "fail2ban",
+      "explanation": "`fail2ban` scans logs and blocks abusive IPs temporarily."
+    },
+    {
+      "question": "What does `umask` control?",
+      "options": ["Default file permissions", "Disk usage", "User password", "Firewall settings"],
+      "answer": "Default file permissions",
+      "explanation": "`umask` defines default permission bits when files are created."
+    },
+    {
+      "question": "Which command is used to add a user to a group?",
+      "options": ["usermod -aG", "groupadd", "adduser", "gpasswd"],
+      "answer": "usermod -aG",
+      "explanation": "`usermod -aG group user` adds a user to a group non-destructively."
+    },
+    {
+      "question": "What is the function of AppArmor?",
+      "options": ["Application-level security", "Process monitoring", "Network logging", "Package management"],
+      "answer": "Application-level security",
+      "explanation": "AppArmor restricts what individual applications can do."
+    },
+    {
+      "question": "Which command inspects file capabilities?",
+      "options": ["getcap", "ls -l", "stat", "capsh"],
+      "answer": "getcap",
+      "explanation": "`getcap` shows Linux file capabilities for binaries."
+    },
+    {
+      "question": "Which file controls password complexity in PAM?",
+      "options": ["/etc/pam.d/common-password", "/etc/passwd", "/etc/shadow", "/etc/pam.conf"],
+      "answer": "/etc/pam.d/common-password",
+      "explanation": "This file defines password strength policies in PAM-based systems."
+    },
+    {
+      "question": "Which command can disable root SSH login?",
+      "options": ["Edit /etc/ssh/sshd_config", "chmod 000 /root", "passwd -l root", "ssh-keygen"],
+      "answer": "Edit /etc/ssh/sshd_config",
+      "explanation": "Set `PermitRootLogin no` to disable root SSH access."
+    },
+    {
+      "question": "Which command shows failed login attempts?",
+      "options": ["lastb", "lastlog", "who", "uptime"],
+      "answer": "lastb",
+      "explanation": "`lastb` displays failed login attempts from `/var/log/btmp`."
+    },
+    {
+      "question": "Which tool can monitor system logs in real-time?",
+      "options": ["journalctl -f", "dmesg", "top", "vmstat"],
+      "answer": "journalctl -f",
+      "explanation": "The `-f` flag follows logs like `tail -f`."
+    },
+    {
+      "question": "Which command sets file immutability?",
+      "options": ["chattr +i", "chmod 000", "setfacl", "mount -r"],
+      "answer": "chattr +i",
+      "explanation": "`chattr +i` makes a file immutable even to root (unless removed)."
+    },
+    {
+      "question": "Which directory stores SSH authorized keys?",
+      "options": ["~/.ssh/authorized_keys", "/etc/ssh/keys", "~/.ssh/known_hosts", "~/.authorized"],
+      "answer": "~/.ssh/authorized_keys",
+      "explanation": "This file contains public keys allowed for SSH login."
+    },
+    {
+      "question": "Which tool audits Linux security policies?",
+      "options": ["Lynis", "Fail2ban", "SELinux", "top"],
+      "answer": "Lynis",
+      "explanation": "`Lynis` is an open-source security auditing tool for Unix systems."
+    }
+  ]
+  
