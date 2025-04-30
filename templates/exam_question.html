@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Question {{ index }} of {{ total }}</h2>
+<form method="post">
+  <p>{{ question.question }}</p>
+  {% for option in question.options %}
+    <div>
+      <input type="radio" name="answer" value="{{ option }}" required>
+      <label>{{ option }}</label>
+    </div>
+  {% endfor %}
+  <button type="submit">Next</button>
+</form>
+<script>
+let timer = 30;
+const countdown = setInterval(() => {
+  timer--;
+  document.getElementById('timer').innerText = timer;
+  if (timer <= 0) document.forms[0].submit();
+}, 1000);
+</script>
+<p>Time left: <span id="timer">30</span> seconds</p>
+{% endblock %}

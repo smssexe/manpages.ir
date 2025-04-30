@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Result</h2>
+<p>You scored {{ score }} out of {{ total }}.</p>
+
+<h3>Review:</h3>
+<ol>
+  {% for ans in answers %}
+    <li>
+      <strong>{{ ans.question }}</strong><br>
+      Your answer: <code>{{ ans.selected }}</code><br>
+      Correct answer: <code>{{ ans.correct }}</code><br>
+      {% if ans.explanation %}
+        <em>Explanation:</em> {{ ans.explanation }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ol>
+{% endblock %}
