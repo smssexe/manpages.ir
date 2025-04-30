@@ -1,0 +1,170 @@
+[
+    {
+      "question": "Which command is used to display the current IP address of a Linux system?",
+      "options": ["ifconfig", "ipconfig", "netstat", "hostname"],
+      "answer": "ifconfig",
+      "explanation": "The 'ifconfig' command displays the current network configuration, including IP addresses, of a Linux system."
+    },
+    {
+      "question": "Which protocol is used to assign IP addresses automatically to devices on a network?",
+      "options": ["DNS", "DHCP", "FTP", "HTTP"],
+      "answer": "DHCP",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses to devices on a network."
+    },
+    {
+      "question": "Which command is used to test network connectivity between two hosts?",
+      "options": ["ping", "traceroute", "netstat", "nslookup"],
+      "answer": "ping",
+      "explanation": "The 'ping' command sends ICMP echo requests to test connectivity between two network hosts."
+    },
+    {
+      "question": "Which file contains the mapping of IP addresses to hostnames in Linux?",
+      "options": ["/etc/hosts", "/etc/resolv.conf", "/etc/network/interfaces", "/etc/hostname"],
+      "answer": "/etc/hosts",
+      "explanation": "The '/etc/hosts' file maps IP addresses to hostnames for local name resolution."
+    },
+    {
+      "question": "Which command displays routing table information in Linux?",
+      "options": ["route", "netstat -r", "ip route", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "All listed commands can display routing table information in Linux."
+    },
+    {
+      "question": "Which port number is used by the SSH protocol?",
+      "options": ["22", "23", "80", "443"],
+      "answer": "22",
+      "explanation": "SSH (Secure Shell) uses TCP port 22 by default."
+    },
+    {
+      "question": "Which command is used to display open network connections and listening ports?",
+      "options": ["netstat", "lsof", "ss", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'netstat', 'lsof', and 'ss' can display open network connections and listening ports."
+    },
+    {
+      "question": "Which protocol is used to translate domain names to IP addresses?",
+      "options": ["DHCP", "DNS", "FTP", "SMTP"],
+      "answer": "DNS",
+      "explanation": "DNS (Domain Name System) resolves domain names to IP addresses."
+    },
+    {
+      "question": "Which command is used to display the MAC address of a network interface?",
+      "options": ["ifconfig", "ip link", "ip addr", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'ifconfig', 'ip link', and 'ip addr' can display the MAC address of network interfaces."
+    },
+    {
+      "question": "Which command is used to trace the route packets take to a network host?",
+      "options": ["traceroute", "ping", "netstat", "dig"],
+      "answer": "traceroute",
+      "explanation": "The 'traceroute' command shows the path packets take to reach a network host."
+    },
+    {
+      "question": "Which file specifies the DNS servers used by the system?",
+      "options": ["/etc/resolv.conf", "/etc/hosts", "/etc/network/interfaces", "/etc/dns.conf"],
+      "answer": "/etc/resolv.conf",
+      "explanation": "The '/etc/resolv.conf' file specifies the DNS servers for name resolution."
+    },
+    {
+      "question": "Which command is used to configure network interfaces in Debian-based systems?",
+      "options": ["ifconfig", "ip", "nmcli", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'ifconfig', 'ip', and 'nmcli' can configure network interfaces in Debian-based systems."
+    },
+    {
+      "question": "Which protocol is used for secure file transfer over SSH?",
+      "options": ["FTP", "SFTP", "HTTP", "Telnet"],
+      "answer": "SFTP",
+      "explanation": "SFTP (SSH File Transfer Protocol) provides secure file transfer over SSH."
+    },
+    {
+      "question": "Which command displays the current hostname of the system?",
+      "options": ["hostname", "uname -n", "cat /etc/hostname", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'hostname', 'uname -n', and 'cat /etc/hostname' can display the system's hostname."
+    },
+    {
+      "question": "Which command is used to change the system's hostname temporarily?",
+      "options": ["hostname newname", "sethostname newname", "changehostname newname", "All of the above"],
+      "answer": "hostname newname",
+      "explanation": "The 'hostname' command followed by the new name changes the system's hostname temporarily."
+    },
+    {
+      "question": "Which protocol is used for sending emails?",
+      "options": ["SMTP", "POP3", "IMAP", "FTP"],
+      "answer": "SMTP",
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending emails."
+    },
+    {
+      "question": "Which protocol is used for retrieving emails from a server?",
+      "options": ["SMTP", "POP3", "IMAP", "Both POP3 and IMAP"],
+      "answer": "Both POP3 and IMAP",
+      "explanation": "POP3 and IMAP are protocols used for retrieving emails from a server."
+    },
+    {
+      "question": "Which command is used to display the default gateway in Linux?",
+      "options": ["route -n", "ip route show", "netstat -r", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'route -n', 'ip route show', and 'netstat -r' can display the default gateway."
+    },
+    {
+      "question": "Which command is used to test DNS name resolution?",
+      "options": ["nslookup", "dig", "host", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'nslookup', 'dig', and 'host' can test DNS name resolution."
+    },
+    {
+      "question": "Which command is used to display network interface statistics?",
+      "options": ["ifconfig", "ip -s link", "netstat -i", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'ifconfig', 'ip -s link', and 'netstat -i' display network interface statistics."
+    },
+    {
+      "question": "Which protocol is used to securely access remote systems?",
+      "options": ["SSH", "Telnet", "FTP", "HTTP"],
+      "answer": "SSH",
+      "explanation": "SSH (Secure Shell) provides secure access to remote systems."
+    },
+    {
+      "question": "Which command is used to list all active network connections?",
+      "options": ["netstat", "ss", "lsof -i", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'netstat', 'ss', and 'lsof -i' can list active network connections."
+    },
+    {
+      "question": "Which command is used to configure network interfaces in Red Hat-based systems?",
+      "options": ["ifconfig", "ip", "nmcli", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'ifconfig', 'ip', and 'nmcli' can configure network interfaces in Red Hat-based systems."
+    },
+    {
+      "question": "Which file contains network interface configuration in Debian-based systems?",
+      "options": ["/etc/network/interfaces", "/etc/sysconfig/network-scripts/ifcfg-eth0", "/etc/netplan/config.yaml", "/etc/hostname"],
+      "answer": "/etc/network/interfaces",
+      "explanation": "In Debian-based systems, '/etc/network/interfaces' contains network interface configurations."
+    },
+    {
+      "question": "Which command is used to restart the networking service in Debian-based systems?",
+      "options": ["service networking restart", "systemctl restart networking", "/etc/init.d/networking restart", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'service networking restart', 'systemctl restart networking', and '/etc/init.d/networking restart' can restart networking services in Debian-based systems."
+    },
+    {
+      "question": "Which command is used to restart the networking service in Red Hat-based systems?",
+      "options": ["service network restart", "systemctl restart network", "/etc/init.d/network restart", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'service network restart', 'systemctl restart network', and '/etc/init.d/network restart' can restart networking services in Red Hat-based systems."
+    },
+    {
+      "question": "Which command is used to assign a static IP address to a network interface?",
+      "options": ["ifconfig eth0 192.168.1.100", "ip addr add 192.168.1.100/24 dev eth0", "nmcli con mod eth0 ipv4.addresses 192.168.1.100/24", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Commands like 'ifconfig', 'ip addr', and 'nmcli' can assign static IP addresses to network interfaces."
+    },
+    {
+      "question": "Which command is used to disable a network interface?",
+      "options": ["ifdown eth0", "ip link set eth0 down", "nmcli dev disconnect eth0", "All of the above"],
+      "answer
+  ::contentReference[oaicite:0]{index=0}
+   
+  

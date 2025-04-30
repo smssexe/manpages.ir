@@ -1,0 +1,264 @@
+[
+    {
+      "question": "What does RAID stand for?",
+      "options": [
+        "Redundant Array of Independent Disks",
+        "Random Access Integrated Disks",
+        "Rapid Access for Integrated Data",
+        "Reliable Array of Independent Drives"
+      ],
+      "answer": "Redundant Array of Independent Disks",
+      "explanation": "RAID stands for Redundant Array of Independent Disks, a data storage virtualization technology that combines multiple physical disk drive components into one or more logical units."
+    },
+    {
+      "question": "Which RAID level provides disk mirroring without parity or striping?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 1",
+      "explanation": "RAID 1 involves mirroring data across two or more disks, providing redundancy without parity or striping."
+    },
+    {
+      "question": "Which RAID level offers the best performance but no fault tolerance?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 0",
+      "explanation": "RAID 0 uses disk striping to improve performance but does not provide any redundancy or fault tolerance."
+    },
+    {
+      "question": "Which RAID level requires a minimum of three disks and uses block-level striping with distributed parity?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 5",
+      "explanation": "RAID 5 uses block-level striping with distributed parity, requiring at least three disks to provide fault tolerance and improved performance."
+    },
+    {
+      "question": "Which RAID level can withstand the failure of two disks simultaneously?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 6",
+      "explanation": "RAID 6 extends RAID 5 by adding an additional parity block, allowing it to withstand the failure of two disks simultaneously."
+    },
+    {
+      "question": "What is the minimum number of disks required to implement RAID 10?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "explanation": "RAID 10 combines mirroring and striping, requiring a minimum of four disks to implement."
+    },
+    {
+      "question": "Which RAID level is also known as disk striping?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 0",
+      "explanation": "RAID 0 is known as disk striping, where data is split evenly across two or more disks without redundancy."
+    },
+    {
+      "question": "Which RAID level is best suited for read-intensive applications?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 1",
+      "explanation": "RAID 1 provides excellent read performance because data can be read from multiple disks simultaneously."
+    },
+    {
+      "question": "In RAID 5, what happens when a single disk fails?",
+      "options": [
+        "All data is lost",
+        "System continues to operate with degraded performance",
+        "System shuts down immediately",
+        "Data is automatically deleted"
+      ],
+      "answer": "System continues to operate with degraded performance",
+      "explanation": "RAID 5 can tolerate a single disk failure; the system continues to operate using parity information, albeit with degraded performance."
+    },
+    {
+      "question": "Which command is used in Linux to create a software RAID array?",
+      "options": [
+        "mkraid",
+        "mdadm",
+        "raidconfig",
+        "raidctl"
+      ],
+      "answer": "mdadm",
+      "explanation": "The 'mdadm' command is used in Linux to manage and create software RAID arrays."
+    },
+    {
+      "question": "What is the primary advantage of RAID 10 over RAID 5?",
+      "options": [
+        "Lower cost",
+        "Better write performance and fault tolerance",
+        "Requires fewer disks",
+        "Simpler configuration"
+      ],
+      "answer": "Better write performance and fault tolerance",
+      "explanation": "RAID 10 offers better write performance and fault tolerance compared to RAID 5, especially in write-intensive applications."
+    },
+    {
+      "question": "Which RAID level uses a dedicated parity disk?",
+      "options": [
+        "RAID 3",
+        "RAID 5",
+        "RAID 6",
+        "RAID 10"
+      ],
+      "answer": "RAID 3",
+      "explanation": "RAID 3 uses byte-level striping with a dedicated parity disk, which can become a bottleneck in high I/O environments."
+    },
+    {
+      "question": "What is the main disadvantage of RAID 0?",
+      "options": [
+        "High cost",
+        "Complex configuration",
+        "No fault tolerance",
+        "Slow performance"
+      ],
+      "answer": "No fault tolerance",
+      "explanation": "RAID 0 offers no fault tolerance; if one disk fails, all data in the array is lost."
+    },
+    {
+      "question": "Which RAID level combines mirroring and striping?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 10",
+      "explanation": "RAID 10 combines the features of RAID 1 (mirroring) and RAID 0 (striping) to provide both redundancy and performance."
+    },
+    {
+      "question": "In a RAID 5 array with three disks, how much usable storage is available?",
+      "options": [
+        "33%",
+        "50%",
+        "66%",
+        "100%"
+      ],
+      "answer": "66%",
+      "explanation": "In RAID 5, one disk's worth of space is used for parity. With three disks, approximately 66% of the total capacity is usable."
+    },
+    {
+      "question": "Which RAID level is most suitable for applications requiring high availability and redundancy?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 10",
+      "explanation": "RAID 10 provides high availability and redundancy by combining mirroring and striping, making it suitable for critical applications."
+    },
+    {
+      "question": "What is the main purpose of parity in RAID configurations?",
+      "options": [
+        "Increase storage capacity",
+        "Improve read performance",
+        "Provide fault tolerance",
+        "Simplify configuration"
+      ],
+      "answer": "Provide fault tolerance",
+      "explanation": "Parity information allows RAID arrays to reconstruct data in case of a disk failure, providing fault tolerance."
+    },
+    {
+      "question": "Which RAID level requires the most disk space for parity?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 6",
+      "explanation": "RAID 6 uses dual parity, requiring more disk space for parity compared to other RAID levels."
+    },
+    {
+      "question": "In RAID terminology, what does 'striping' refer to?",
+      "options": [
+        "Duplicating data across disks",
+        "Distributing data across multiple disks",
+        "Storing parity information",
+        "Encrypting data on disks"
+      ],
+      "answer": "Distributing data across multiple disks",
+      "explanation": "Striping involves dividing and writing data across multiple disks to improve performance."
+    },
+    {
+      "question": "Which RAID level is also known as 'mirroring'?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "RAID 1",
+      "explanation": "RAID 1 is known as mirroring because it duplicates the same data on two or more disks."
+    },
+    {
+      "question": "What happens if a single disk fails in a RAID 1 array?",
+      "options": [
+        "All data is lost",
+        "System crashes",
+        "Data is still accessible from the mirrored disk",
+        "Performance improves"
+      ],
+      "answer": "Data is still accessible from the mirrored disk",
+      "explanation": "In RAID 1, data is mirrored across disks, so if one fails, the data remains accessible from the other."
+    },
+    {
+      "question": "Which RAID level is most cost-effective for redundancy?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 5",
+      "explanation": "RAID 5 offers a good balance between cost, performance, and redundancy by using distributed parity."
+    },
+    {
+      "question": "What is the primary disadvantage of software RAID compared to hardware RAID?",
+      "options": [
+        "Higher cost",
+        "Lower performance",
+        "Complex configuration",
+        "Limited scalability"
+      ],
+      "answer": "Lower performance",
+      "explanation": "Software RAID relies on the host system's CPU, which can lead to lower performance compared to dedicated hardware RAID controllers."
+    },
+    {
+      "question": "Which command in Linux is used to monitor the status of a software RAID array?",
+      "options": [
+        "raidstatus",
+        "mdstat",
+        "raidmon",
+        "mdadm
+  ::contentReference[oaicite:0]{index=0}
+   
+  

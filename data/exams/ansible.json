@@ -1,0 +1,277 @@
+[
+    {
+      "question": "What is Ansible primarily used for?",
+      "options": [
+        "Web development",
+        "Database management",
+        "Configuration management and automation",
+        "Graphic design"
+      ],
+      "answer": "Configuration management and automation",
+      "explanation": "Ansible is an open-source tool used for automating software provisioning, configuration management, and application deployment."
+    },
+    {
+      "question": "Which language is used to write Ansible playbooks?",
+      "options": [
+        "JSON",
+        "XML",
+        "YAML",
+        "INI"
+      ],
+      "answer": "YAML",
+      "explanation": "Ansible playbooks are written in YAML (Yet Another Markup Language), which is human-readable and easy to understand."
+    },
+    {
+      "question": "What is the default location of the Ansible inventory file?",
+      "options": [
+        "/etc/ansible/hosts",
+        "/usr/bin/ansible/hosts",
+        "/etc/hosts",
+        "/home/ansible/hosts"
+      ],
+      "answer": "/etc/ansible/hosts",
+      "explanation": "By default, Ansible looks for the inventory file at /etc/ansible/hosts."
+    },
+    {
+      "question": "Which command is used to execute an Ansible playbook?",
+      "options": [
+        "ansible-playbook",
+        "ansible-run",
+        "ansible-execute",
+        "ansible-start"
+      ],
+      "answer": "ansible-playbook",
+      "explanation": "The 'ansible-playbook' command is used to execute playbooks in Ansible."
+    },
+    {
+      "question": "What does the 'hosts' field specify in an Ansible playbook?",
+      "options": [
+        "The tasks to execute",
+        "The variables to use",
+        "The target machines for the playbook",
+        "The roles to apply"
+      ],
+      "answer": "The target machines for the playbook",
+      "explanation": "The 'hosts' field defines the group of target machines on which the tasks will be executed."
+    },
+    {
+      "question": "Which module is used to install packages in Ansible?",
+      "options": [
+        "apt",
+        "yum",
+        "package",
+        "install"
+      ],
+      "answer": "package",
+      "explanation": "The 'package' module is a generic module that works with different package managers like apt and yum."
+    },
+    {
+      "question": "What is the purpose of the 'become' directive in Ansible?",
+      "options": [
+        "To define variables",
+        "To switch users",
+        "To execute tasks with elevated privileges",
+        "To start services"
+      ],
+      "answer": "To execute tasks with elevated privileges",
+      "explanation": "The 'become' directive allows Ansible to run tasks with sudo or other privilege escalation methods."
+    },
+    {
+      "question": "Which Ansible module is used to manage services?",
+      "options": [
+        "service",
+        "systemd",
+        "init",
+        "daemon"
+      ],
+      "answer": "service",
+      "explanation": "The 'service' module is used to manage services on remote hosts."
+    },
+    {
+      "question": "What is an Ansible role?",
+      "options": [
+        "A user permission level",
+        "A collection of tasks, variables, and handlers",
+        "A type of playbook",
+        "A configuration file"
+      ],
+      "answer": "A collection of tasks, variables, and handlers",
+      "explanation": "Roles are a way of organizing playbooks and other files to facilitate reuse and sharing."
+    },
+    {
+      "question": "Which command checks the syntax of a playbook?",
+      "options": [
+        "ansible-playbook --check",
+        "ansible-playbook --syntax-check",
+        "ansible-playbook --dry-run",
+        "ansible-playbook --verify"
+      ],
+      "answer": "ansible-playbook --syntax-check",
+      "explanation": "The '--syntax-check' option checks the playbook for syntax errors without executing it."
+    },
+    {
+      "question": "What is the purpose of the 'handlers' section in a playbook?",
+      "options": [
+        "To define variables",
+        "To execute tasks conditionally",
+        "To respond to notifications triggered by tasks",
+        "To manage inventory"
+      ],
+      "answer": "To respond to notifications triggered by tasks",
+      "explanation": "Handlers are tasks that are triggered by other tasks using the 'notify' directive."
+    },
+    {
+      "question": "Which Ansible module is used to copy files to remote hosts?",
+      "options": [
+        "copy",
+        "file",
+        "fetch",
+        "transfer"
+      ],
+      "answer": "copy",
+      "explanation": "The 'copy' module is used to copy files from the control machine to remote hosts."
+    },
+    {
+      "question": "What does the 'gather_facts' directive do in a playbook?",
+      "options": [
+        "Collects information about remote hosts",
+        "Defines variables",
+        "Starts services",
+        "Installs packages"
+      ],
+      "answer": "Collects information about remote hosts",
+      "explanation": "When set to 'yes', 'gather_facts' collects system information from remote hosts."
+    },
+    {
+      "question": "Which command is used to encrypt sensitive data in Ansible?",
+      "options": [
+        "ansible-vault",
+        "ansible-encrypt",
+        "ansible-secure",
+        "ansible-protect"
+      ],
+      "answer": "ansible-vault",
+      "explanation": "Ansible Vault is used to encrypt and decrypt sensitive data like passwords and keys."
+    },
+    {
+      "question": "What is the default port used by Ansible to connect to remote hosts?",
+      "options": [
+        "22",
+        "80",
+        "443",
+        "8080"
+      ],
+      "answer": "22",
+      "explanation": "Ansible uses SSH to connect to remote hosts, which by default operates on port 22."
+    },
+    {
+      "question": "Which file defines the list of managed nodes in Ansible?",
+      "options": [
+        "hosts",
+        "inventory",
+        "nodes",
+        "machines"
+      ],
+      "answer": "inventory",
+      "explanation": "The inventory file lists all the managed nodes and their grouping."
+    },
+    {
+      "question": "What is the purpose of the 'when' directive in Ansible?",
+      "options": [
+        "To schedule tasks",
+        "To define task order",
+        "To execute tasks conditionally",
+        "To loop over tasks"
+      ],
+      "answer": "To execute tasks conditionally",
+      "explanation": "The 'when' directive allows tasks to run only when certain conditions are met."
+    },
+    {
+      "question": "Which module is used to create directories in Ansible?",
+      "options": [
+        "file",
+        "directory",
+        "mkdir",
+        "create"
+      ],
+      "answer": "file",
+      "explanation": "The 'file' module with 'state: directory' is used to create directories."
+    },
+    {
+      "question": "What is idempotency in the context of Ansible?",
+      "options": [
+        "The ability to run a task multiple times without changing the result",
+        "The ability to execute tasks in parallel",
+        "The ability to rollback tasks",
+        "The ability to schedule tasks"
+      ],
+      "answer": "The ability to run a task multiple times without changing the result",
+      "explanation": "Idempotency ensures that running the same task multiple times yields the same result."
+    },
+    {
+      "question": "Which directive is used to include another playbook?",
+      "options": [
+        "import_playbook",
+        "include_playbook",
+        "load_playbook",
+        "use_playbook"
+      ],
+      "answer": "import_playbook",
+      "explanation": "The 'import_playbook' directive is used to include another playbook within a playbook."
+    },
+    {
+      "question": "What does the 'register' keyword do in Ansible?",
+      "options": [
+        "Registers a new user",
+        "Stores the output of a task in a variable",
+        "Defines a new module",
+        "Starts a service"
+      ],
+      "answer": "Stores the output of a task in a variable",
+      "explanation": "The 'register' keyword captures the output of a task for later use."
+    },
+    {
+      "question": "Which module is used to fetch files from remote hosts?",
+      "options": [
+        "copy",
+        "fetch",
+        "get",
+        "retrieve"
+      ],
+      "answer": "fetch",
+      "explanation": "The 'fetch' module is used to copy files from remote hosts to the control machine."
+    },
+    {
+      "question": "What is the purpose of the 'with_items' directive?",
+      "options": [
+        "To define variables",
+        "To loop over a list of items",
+        "To include tasks",
+        "To set conditions"
+      ],
+      "answer": "To loop over a list of items",
+      "explanation": "The 'with_items' directive allows looping over a list of items in a task."
+    },
+    {
+      "question": "Which command is used to display information about Ansible modules?",
+      "options": [
+        "ansible-doc",
+        "ansible-info",
+        "ansible-help",
+        "ansible-man"
+      ],
+      "answer": "ansible-doc",
+      "explanation": "The 'ansible-doc' command provides documentation on Ansible modules."
+    },
+    {
+      "question": "What does the 'notify' directive do in a task?",
+      "options": [
+        "Sends an email notification",
+        "Triggers a handler",
+        "Logs a message",
+        "Starts a service"
+      ],
+      "answer": "Triggers a handler",
+      "explanation": "The 'notify' directive triggers a handler when the task reports a change."
+    }
+]

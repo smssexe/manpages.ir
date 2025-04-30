@@ -1,0 +1,183 @@
+[
+    {
+      "question": "Which directory contains the system's kernel and bootloader files?",
+      "options": ["/boot", "/etc", "/usr", "/var"],
+      "answer": "/boot",
+      "explanation": "The /boot directory stores the Linux kernel and bootloader files necessary for system startup."
+    },
+    {
+      "question": "What is the purpose of the /etc directory?",
+      "options": ["Contains user home directories", "Stores system configuration files", "Holds temporary files", "Contains device files"],
+      "answer": "Stores system configuration files",
+      "explanation": "The /etc directory contains system-wide configuration files and shell scripts that are used to boot and initialize system settings."
+    },
+    {
+      "question": "Which command is used to display disk space usage of file systems?",
+      "options": ["df", "du", "ls", "mount"],
+      "answer": "df",
+      "explanation": "The 'df' command reports the amount of disk space used and available on file systems."
+    },
+    {
+      "question": "Which directory is typically used for mounting removable media like USB drives?",
+      "options": ["/media", "/mnt", "/dev", "/run"],
+      "answer": "/media",
+      "explanation": "The /media directory is used for mounting removable media such as USB drives and CD-ROMs."
+    },
+    {
+      "question": "What does the Filesystem Hierarchy Standard (FHS) define?",
+      "options": ["File permissions", "Directory structure and contents", "User authentication methods", "Kernel module management"],
+      "answer": "Directory structure and contents",
+      "explanation": "The FHS defines the directory structure and directory contents in Unix and Unix-like operating systems."
+    },
+    {
+      "question": "Which command is used to create a new directory?",
+      "options": ["mkdir", "rmdir", "touch", "mkfile"],
+      "answer": "mkdir",
+      "explanation": "The 'mkdir' command is used to create new directories."
+    },
+    {
+      "question": "What is the purpose of the /var directory?",
+      "options": ["Contains variable data files", "Stores user home directories", "Holds system binaries", "Contains temporary files"],
+      "answer": "Contains variable data files",
+      "explanation": "The /var directory holds variable data files like logs, databases, websites, and emails."
+    },
+    {
+      "question": "Which command is used to change file permissions?",
+      "options": ["chmod", "chown", "chgrp", "umask"],
+      "answer": "chmod",
+      "explanation": "The 'chmod' command changes the file mode (permissions) of a file or directory."
+    },
+    {
+      "question": "Which directory contains device files in Linux?",
+      "options": ["/dev", "/proc", "/sys", "/run"],
+      "answer": "/dev",
+      "explanation": "The /dev directory contains device files that represent hardware devices."
+    },
+    {
+      "question": "What is the purpose of the /home directory?",
+      "options": ["Stores system configuration files", "Contains user home directories", "Holds temporary files", "Contains system binaries"],
+      "answer": "Contains user home directories",
+      "explanation": "The /home directory contains the personal directories of all users."
+    },
+    {
+      "question": "Which command is used to mount a file system?",
+      "options": ["mount", "umount", "mkfs", "fsck"],
+      "answer": "mount",
+      "explanation": "The 'mount' command attaches a file system to the system's directory tree."
+    },
+    {
+      "question": "What is the purpose of the /proc directory?",
+      "options": ["Contains process information", "Stores user data", "Holds temporary files", "Contains device drivers"],
+      "answer": "Contains process information",
+      "explanation": "The /proc directory is a virtual filesystem that provides process and system information."
+    },
+    {
+      "question": "Which command is used to check and repair a Linux file system?",
+      "options": ["fsck", "mkfs", "mount", "umount"],
+      "answer": "fsck",
+      "explanation": "The 'fsck' command checks and repairs file system inconsistencies."
+    },
+    {
+      "question": "What does the 'du' command do?",
+      "options": ["Displays disk usage of files and directories", "Shows disk free space", "Deletes unused files", "Updates file permissions"],
+      "answer": "Displays disk usage of files and directories",
+      "explanation": "The 'du' command estimates and displays the disk space used by files and directories."
+    },
+    {
+      "question": "Which directory contains essential command binaries?",
+      "options": ["/bin", "/etc", "/usr", "/var"],
+      "answer": "/bin",
+      "explanation": "The /bin directory contains essential command binaries needed for single-user mode and system repair."
+    },
+    {
+      "question": "What is the purpose of the /tmp directory?",
+      "options": ["Stores temporary files", "Contains user home directories", "Holds system configuration files", "Contains device files"],
+      "answer": "Stores temporary files",
+      "explanation": "The /tmp directory is used to store temporary files created by system and user processes."
+    },
+    {
+      "question": "Which command is used to change the owner of a file?",
+      "options": ["chown", "chmod", "chgrp", "usermod"],
+      "answer": "chown",
+      "explanation": "The 'chown' command changes the ownership of a file or directory."
+    },
+    {
+      "question": "What is the purpose of the /usr directory?",
+      "options": ["Contains user utilities and applications", "Stores temporary files", "Holds device files", "Contains bootloader files"],
+      "answer": "Contains user utilities and applications",
+      "explanation": "The /usr directory contains user utilities and applications, including binaries and libraries."
+    },
+    {
+      "question": "Which command is used to unmount a file system?",
+      "options": ["umount", "mount", "fsck", "eject"],
+      "answer": "umount",
+      "explanation": "The 'umount' command detaches a file system from the system's directory tree."
+    },
+    {
+      "question": "What is the purpose of the /sbin directory?",
+      "options": ["Contains system binaries", "Stores user data", "Holds temporary files", "Contains user home directories"],
+      "answer": "Contains system binaries",
+      "explanation": "The /sbin directory contains system binaries used for system administration tasks."
+    },
+    {
+      "question": "Which file lists file systems to be mounted at boot time?",
+      "options": ["/etc/fstab", "/etc/mtab", "/etc/passwd", "/etc/shadow"],
+      "answer": "/etc/fstab",
+      "explanation": "The /etc/fstab file contains information about file systems to be mounted automatically at boot time."
+    },
+    {
+      "question": "What does the 'ls' command do?",
+      "options": ["Lists directory contents", "Changes file permissions", "Creates new directories", "Deletes files"],
+      "answer": "Lists directory contents",
+      "explanation": "The 'ls' command lists the contents of a directory."
+    },
+    {
+      "question": "Which command is used to create a new file system on a partition?",
+      "options": ["mkfs", "fsck", "mount", "umount"],
+      "answer": "mkfs",
+      "explanation": "The 'mkfs' command is used to create a new file system on a partition."
+    },
+    {
+      "question": "What is the purpose of the /lib directory?",
+      "options": ["Contains shared library files", "Stores user data", "Holds temporary files", "Contains device files"],
+      "answer": "Contains shared library files",
+      "explanation": "The /lib directory contains shared library files required by system programs."
+    },
+    {
+      "question": "Which command displays the current working directory?",
+      "options": ["pwd", "cd", "ls", "dir"],
+      "answer": "pwd",
+      "explanation": "The 'pwd' command prints the current working directory."
+    },
+    {
+      "question": "What is the purpose of the /root directory?",
+      "options": ["Home directory for the root user", "Contains system binaries", "Stores temporary files", "Holds user data"],
+      "answer": "Home directory for the root user",
+      "explanation": "The /root directory is the home directory for the root user."
+    },
+    {
+      "question": "Which command is used to display file system disk space usage?",
+      "options": ["df", "du", "ls", "stat"],
+      "answer": "df",
+      "explanation": "The 'df' command displays the amount of disk space used and available on file systems."
+    },
+    {
+      "question": "What is the purpose of the /srv directory?",
+      "options": ["Contains data for services provided by the system", "Stores user data", "Holds temporary files", "Contains device files"],
+      "answer": "Contains data for services provided by the system",
+      "explanation": "The /srv directory contains data for services provided by the system, such as web and FTP servers."
+    },
+    {
+      "question": "Which command is used to remove empty directories?",
+      "options": ["rmdir", "rm", "unlink", "delete"],
+      "answer": "rmdir",
+      "explanation": "The 'rmdir' command removes empty directories."
+    },
+    {
+      "question": "What is the purpose of the /opt directory?",
+      "options": ["Contains optional application software packages", "Stores user data", "Holds temporary files", "Contains device files"],
+      "answer": "Contains optional application software packages",
+      "explanation": "The /opt directory is used for installing optional application software packages."
+    }
+  ]
+  
