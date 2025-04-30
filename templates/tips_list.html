@@ -13,8 +13,13 @@
         <li>
             <a href="/tips/{{ entry.date }}">{{ entry.date }}</a>
             {% if entry.tags %}
-                <small>({{ entry.tags }})</small>
-            {% endif %}
+    <small>(
+        {% for tag in entry.tags %}
+            <a href="/tips/tag/{{ tag }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    )</small>
+{% endif %}
+
         </li>
     {% endfor %}
 </ul>
