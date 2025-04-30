@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Tips tagged with "{{ tag }}"</h2>
+
+<ul>
+    {% for d in dates %}
+        <li><a href="/tips/{{ d }}">{{ d }}</a></li>
+    {% endfor %}
+</ul>
+
+{% if not dates %}
+    <p>No tips found for this tag.</p>
+{% endif %}
+{% endblock %}

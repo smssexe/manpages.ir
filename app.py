@@ -42,16 +42,19 @@ def tips_list():
         if fname.endswith(".md"):
             date = fname.replace(".md", "")
             path = os.path.join(tips_dir, fname)
+            tags = []
             with open(path, encoding="utf-8") as f:
-                lines = f.readlines()
-                tags = ""
-                for line in lines:
-                    if line.lower().startswith("**tags:**"):
-                        tags = line.split(":", 1)[1].strip()
+                for line in f:
+                    if "tags" in line.lower():
+                        cleaned = line.replace("**", "").strip()
+                        parts = cleaned.split(":", 1)
+                        if len(parts) == 2:
+                            tags = [t.strip() for t in parts[1].split(",")]
                         break
             entries.append({"date": date, "tags": tags})
     entries.sort(key=lambda x: x["date"], reverse=True)
     return render_template("tips_list.html", entries=entries)
+
 
 
 @app.route('/tips/<date>')
@@ -82,6 +85,27 @@ def search_tips():
                         results.append(date)
     results.sort(reverse=True)
     return render_template("tips_search.html", query=query, results=results)
+
+@app.route('/tips/tag/<tag>')
+def tips_by_tag(tag):
+    tag = tag.lower()
+    tips_dir = os.path.join("data", "tips")
+    matched = []
+
+    for fname in os.listdir(tips_dir):
+        if fname.endswith(".md"):
+            date = fname.replace(".md", "")
+            path = os.path.join(tips_dir, fname)
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    if line.lower().startswith("**tags:**"):
+                        tags_line = line.split(":", 1)[1].strip().lower()
+                        tags = [t.strip() for t in tags_line.split(",")]
+                        if tag in tags:
+                            matched.append(date)
+                        break
+    matched.sort(reverse=True)
+    return render_template("tips_by_tag.html", tag=tag, dates=matched)
 
 @app.route('/man/<command>')
 def man_page(command):

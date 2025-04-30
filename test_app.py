@@ -10,7 +10,7 @@ def client():
 def test_index(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"html" in response.data  # یا چیزی که توی index.html هست
+    assert b"html" in response.data
 
 def test_search_empty_query(client):
     response = client.get('/search?q=')
