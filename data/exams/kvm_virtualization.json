@@ -1,0 +1,266 @@
+[
+    {
+      "question": "What does KVM stand for in virtualization?",
+      "options": [
+        "Kernel Virtual Machine",
+        "Kernel-based Virtual Machine",
+        "Key Virtual Module",
+        "Kernel Virtualization Manager"
+      ],
+      "answer": "Kernel-based Virtual Machine",
+      "explanation": "KVM stands for Kernel-based Virtual Machine, a virtualization module in the Linux kernel that allows the kernel to function as a hypervisor."
+    },
+    {
+      "question": "Which Linux kernel version introduced KVM?",
+      "options": [
+        "2.4",
+        "2.6.20",
+        "3.0",
+        "4.1"
+      ],
+      "answer": "2.6.20",
+      "explanation": "KVM was merged into the Linux kernel mainline in version 2.6.20."
+    },
+    {
+      "question": "What type of virtualization does KVM provide?",
+      "options": [
+        "Paravirtualization",
+        "Full virtualization",
+        "OS-level virtualization",
+        "Emulation"
+      ],
+      "answer": "Full virtualization",
+      "explanation": "KVM provides full virtualization by leveraging hardware virtualization extensions."
+    },
+    {
+      "question": "Which hardware feature is essential for KVM to function?",
+      "options": [
+        "Hyper-Threading",
+        "Virtualization extensions (Intel VT or AMD-V)",
+        "Multi-core processors",
+        "High RAM capacity"
+      ],
+      "answer": "Virtualization extensions (Intel VT or AMD-V)",
+      "explanation": "KVM requires CPU virtualization extensions like Intel VT or AMD-V to operate."
+    },
+    {
+      "question": "Which command checks if your CPU supports virtualization extensions required by KVM?",
+      "options": [
+        "lscpu",
+        "lsmod",
+        "dmesg",
+        "cat /proc/cpuinfo"
+      ],
+      "answer": "cat /proc/cpuinfo",
+      "explanation": "The 'cat /proc/cpuinfo' command displays CPU information, including virtualization support flags."
+    },
+    {
+      "question": "Which user-space tool is commonly used with KVM for managing virtual machines?",
+      "options": [
+        "VirtualBox",
+        "VMware",
+        "QEMU",
+        "Docker"
+      ],
+      "answer": "QEMU",
+      "explanation": "QEMU is often used with KVM to provide user-space tools for managing virtual machines."
+    },
+    {
+      "question": "What is the purpose of the 'virt-manager' tool in KVM virtualization?",
+      "options": [
+        "Network configuration",
+        "Storage management",
+        "Graphical interface for managing virtual machines",
+        "Kernel compilation"
+      ],
+      "answer": "Graphical interface for managing virtual machines",
+      "explanation": "'virt-manager' provides a graphical user interface for managing KVM virtual machines."
+    },
+    {
+      "question": "Which command lists all running virtual machines managed by KVM?",
+      "options": [
+        "virsh list",
+        "kvm list",
+        "qemu list",
+        "vmstat"
+      ],
+      "answer": "virsh list",
+      "explanation": "The 'virsh list' command displays all running virtual machines under KVM."
+    },
+    {
+      "question": "What file extension is commonly used for KVM virtual machine disk images?",
+      "options": [
+        ".vdi",
+        ".vmdk",
+        ".qcow2",
+        ".img"
+      ],
+      "answer": ".qcow2",
+      "explanation": "The '.qcow2' format is a QEMU Copy-On-Write version 2 disk image format used with KVM."
+    },
+    {
+      "question": "Which command starts a virtual machine named 'vm1' using virsh?",
+      "options": [
+        "virsh start vm1",
+        "kvm start vm1",
+        "qemu start vm1",
+        "vmctl start vm1"
+      ],
+      "answer": "virsh start vm1",
+      "explanation": "The 'virsh start vm1' command initiates the virtual machine named 'vm1'."
+    },
+    {
+      "question": "Which command is used to create a new virtual machine disk image in qcow2 format?",
+      "options": [
+        "qemu-img create -f qcow2",
+        "kvm-img create -f qcow2",
+        "virt-create -f qcow2",
+        "vm-create -f qcow2"
+      ],
+      "answer": "qemu-img create -f qcow2",
+      "explanation": "The 'qemu-img create -f qcow2' command creates a new disk image in qcow2 format."
+    },
+    {
+      "question": "Which directory typically contains KVM virtual machine configuration files?",
+      "options": [
+        "/etc/kvm/",
+        "/etc/libvirt/qemu/",
+        "/var/lib/kvm/",
+        "/usr/local/kvm/"
+      ],
+      "answer": "/etc/libvirt/qemu/",
+      "explanation": "KVM virtual machine configurations are usually stored in '/etc/libvirt/qemu/'."
+    },
+    {
+      "question": "What is the function of the 'virt-install' command?",
+      "options": [
+        "Install KVM on the host",
+        "Create and install a new virtual machine",
+        "Update existing virtual machines",
+        "Remove virtual machines"
+      ],
+      "answer": "Create and install a new virtual machine",
+      "explanation": "'virt-install' is a command-line tool for creating new KVM virtual machines."
+    },
+    {
+      "question": "Which command shuts down a running virtual machine named 'vm1'?",
+      "options": [
+        "virsh shutdown vm1",
+        "kvm stop vm1",
+        "qemu stop vm1",
+        "vmctl stop vm1"
+      ],
+      "answer": "virsh shutdown vm1",
+      "explanation": "The 'virsh shutdown vm1' command gracefully shuts down the virtual machine 'vm1'."
+    },
+    {
+      "question": "Which file system is commonly used for storing KVM virtual machine images?",
+      "options": [
+        "NTFS",
+        "ext4",
+        "FAT32",
+        "HFS+"
+      ],
+      "answer": "ext4",
+      "explanation": "The 'ext4' file system is commonly used on Linux systems for storing KVM VM images."
+    },
+    {
+      "question": "What is the purpose of the 'virt-clone' command?",
+      "options": [
+        "Clone the host system",
+        "Clone a virtual machine",
+        "Clone a disk image",
+        "Clone a network configuration"
+      ],
+      "answer": "Clone a virtual machine",
+      "explanation": "'virt-clone' is used to create a copy of an existing virtual machine."
+    },
+    {
+      "question": "Which network mode allows a KVM virtual machine to appear as a separate physical device on the network?",
+      "options": [
+        "NAT",
+        "Bridged",
+        "Host-only",
+        "Internal"
+      ],
+      "answer": "Bridged",
+      "explanation": "Bridged networking allows a VM to appear as a separate device on the network."
+    },
+    {
+      "question": "What is the function of the 'virt-sysprep' tool?",
+      "options": [
+        "Prepare a VM for cloning by removing system-specific information",
+        "Install new packages on a VM",
+        "Update the VM's operating system",
+        "Backup the VM's disk image"
+      ],
+      "answer": "Prepare a VM for cloning by removing system-specific information",
+      "explanation": "'virt-sysprep' removes system-specific data to prepare a VM for cloning."
+    },
+    {
+      "question": "Which command lists all defined virtual machines, including those not currently running?",
+      "options": [
+        "virsh list --all",
+        "kvm list --all",
+        "qemu list --all",
+        "vmctl list --all"
+      ],
+      "answer": "virsh list --all",
+      "explanation": "The 'virsh list --all' command displays all defined VMs, running or not."
+    },
+    {
+      "question": "Which command is used to delete a virtual machine named 'vm1'?",
+      "options": [
+        "virsh undefine vm1",
+        "kvm delete vm1",
+        "qemu remove vm1",
+        "vmctl destroy vm1"
+      ],
+      "answer": "virsh undefine vm1",
+      "explanation": "'virsh undefine vm1' removes the VM's configuration, effectively deleting it."
+    },
+    {
+      "question": "What is the purpose of the 'virt-top' command?",
+      "options": [
+        "Display top processes on the host",
+        "Monitor resource usage of virtual machines",
+        "List all virtual machines",
+        "Start a virtual machine"
+      ],
+      "answer": "Monitor resource usage of virtual machines",
+      "explanation": "'virt-top' provides a top-like interface for monitoring VM resource usage."
+    },
+    {
+      "question": "Which command migrates a running VM to another host?",
+      "options": [
+        "virsh migrate",
+        "kvm migrate",
+        "qemu-migrate",
+        "vmctl move"
+      ],
+      "answer": "virsh migrate",
+      "explanation": "'virsh migrate' is used to move a running VM to another host."
+    },
+    {
+      "question": "What is the function of the 'virt-viewer' tool?",
+      "options": [
+        "Edit VM configurations",
+        "View VM logs",
+        "Provide a graphical console for VMs",
+        "Monitor VM performance"
+      ],
+      "answer": "Provide a graphical console for VMs",
+      "explanation": "'virt-viewer' opens a graphical console to interact with virtual machines."
+    },
+    {
+      "question": "Which command creates a snapshot of a running virtual machine?",
+      "options": [
+        "virsh snapshot-create-as",
+        "kvm snapshot",
+        "qemu-snapshot",
+        "vmctl snapshot"
+      ],
+      "answer": "virsh snapshot-create-as",
+      "explanation": "'virsh snapshot-create-as' creates a snapshot of a VM's current state."
+    }
+]

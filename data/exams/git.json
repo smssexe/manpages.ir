@@ -1,0 +1,288 @@
+[
+    {
+      "question": "What is Git?",
+      "options": [
+        "A programming language",
+        "A version control system",
+        "A web browser",
+        "An operating system"
+      ],
+      "answer": "A version control system",
+      "explanation": "Git is a distributed version control system used to track changes in source code during software development."
+    },
+    {
+      "question": "Which command initializes a new Git repository?",
+      "options": [
+        "git start",
+        "git init",
+        "git new",
+        "git create"
+      ],
+      "answer": "git init",
+      "explanation": "The 'git init' command creates a new, empty Git repository."
+    },
+    {
+      "question": "How do you clone a repository from a remote server?",
+      "options": [
+        "git copy",
+        "git clone",
+        "git replicate",
+        "git download"
+      ],
+      "answer": "git clone",
+      "explanation": "The 'git clone' command copies an existing Git repository from a remote server."
+    },
+    {
+      "question": "Which command stages all changes in the current directory?",
+      "options": [
+        "git stage .",
+        "git add .",
+        "git commit .",
+        "git push ."
+      ],
+      "answer": "git add .",
+      "explanation": "The 'git add .' command stages all changes in the current directory for the next commit."
+    },
+    {
+      "question": "What does the 'git commit' command do?",
+      "options": [
+        "Saves changes to the remote repository",
+        "Stages changes for commit",
+        "Records changes to the local repository",
+        "Deletes changes from the repository"
+      ],
+      "answer": "Records changes to the local repository",
+      "explanation": "The 'git commit' command records staged changes to the local repository."
+    },
+    {
+      "question": "Which command shows the current status of the working directory and staging area?",
+      "options": [
+        "git check",
+        "git status",
+        "git log",
+        "git diff"
+      ],
+      "answer": "git status",
+      "explanation": "The 'git status' command displays the state of the working directory and staging area."
+    },
+    {
+      "question": "How do you view the commit history?",
+      "options": [
+        "git history",
+        "git commits",
+        "git log",
+        "git show"
+      ],
+      "answer": "git log",
+      "explanation": "The 'git log' command shows the commit history of the repository."
+    },
+    {
+      "question": "Which command creates a new branch?",
+      "options": [
+        "git branch new_branch",
+        "git new branch",
+        "git create branch",
+        "git init branch"
+      ],
+      "answer": "git branch new_branch",
+      "explanation": "The 'git branch' command followed by a name creates a new branch."
+    },
+    {
+      "question": "How do you switch to another branch?",
+      "options": [
+        "git switch branch_name",
+        "git checkout branch_name",
+        "git change branch_name",
+        "git move branch_name"
+      ],
+      "answer": "git checkout branch_name",
+      "explanation": "The 'git checkout' command is used to switch between branches."
+    },
+    {
+      "question": "What does 'git merge' do?",
+      "options": [
+        "Deletes a branch",
+        "Combines changes from one branch into another",
+        "Creates a new branch",
+        "Pushes changes to the remote repository"
+      ],
+      "answer": "Combines changes from one branch into another",
+      "explanation": "The 'git merge' command integrates changes from one branch into another."
+    },
+    {
+      "question": "Which command is used to fetch and integrate changes from a remote repository?",
+      "options": [
+        "git fetch",
+        "git pull",
+        "git update",
+        "git sync"
+      ],
+      "answer": "git pull",
+      "explanation": "The 'git pull' command fetches and integrates changes from a remote repository into the current branch."
+    },
+    {
+      "question": "How do you push local commits to a remote repository?",
+      "options": [
+        "git send",
+        "git upload",
+        "git push",
+        "git commit"
+      ],
+      "answer": "git push",
+      "explanation": "The 'git push' command uploads local commits to a remote repository."
+    },
+    {
+      "question": "What is the purpose of the '.gitignore' file?",
+      "options": [
+        "To track ignored files",
+        "To list files and directories to be ignored by Git",
+        "To delete files from the repository",
+        "To rename files in the repository"
+      ],
+      "answer": "To list files and directories to be ignored by Git",
+      "explanation": "The '.gitignore' file specifies files and directories that Git should ignore."
+    },
+    {
+      "question": "Which command shows the differences between commits, commit and working tree, etc.?",
+      "options": [
+        "git diff",
+        "git status",
+        "git log",
+        "git show"
+      ],
+      "answer": "git diff",
+      "explanation": "The 'git diff' command shows changes between commits, commit and working tree, etc."
+    },
+    {
+      "question": "How do you discard changes in the working directory?",
+      "options": [
+        "git discard",
+        "git remove",
+        "git checkout -- filename",
+        "git reset filename"
+      ],
+      "answer": "git checkout -- filename",
+      "explanation": "The 'git checkout -- filename' command discards changes in the working directory."
+    },
+    {
+      "question": "What does 'git reset' do?",
+      "options": [
+        "Resets the repository to its initial state",
+        "Unstages files and optionally moves the HEAD",
+        "Deletes the repository",
+        "Commits changes to the repository"
+      ],
+      "answer": "Unstages files and optionally moves the HEAD",
+      "explanation": "The 'git reset' command is used to unstage files and move the HEAD to a specified state."
+    },
+    {
+      "question": "Which command is used to temporarily save changes that are not ready to be committed?",
+      "options": [
+        "git save",
+        "git stash",
+        "git store",
+        "git hold"
+      ],
+      "answer": "git stash",
+      "explanation": "The 'git stash' command temporarily shelves changes in the working directory."
+    },
+    {
+      "question": "How do you apply stashed changes?",
+      "options": [
+        "git stash apply",
+        "git stash pop",
+        "git stash push",
+        "git stash drop"
+      ],
+      "answer": "git stash apply",
+      "explanation": "The 'git stash apply' command applies stashed changes to the working directory."
+    },
+    {
+      "question": "What does 'git remote -v' display?",
+      "options": [
+        "Verbose output of remote repositories",
+        "Version of Git installed",
+        "List of remote repositories and their URLs",
+        "List of local branches"
+      ],
+      "answer": "List of remote repositories and their URLs",
+      "explanation": "The 'git remote -v' command shows the URLs of remote repositories."
+    },
+    {
+      "question": "How do you remove a file from the staging area?",
+      "options": [
+        "git remove filename",
+        "git unstage filename",
+        "git reset filename",
+        "git delete filename"
+      ],
+      "answer": "git reset filename",
+      "explanation": "The 'git reset filename' command removes a file from the staging area."
+    },
+    {
+      "question": "Which command is used to tag a specific commit?",
+      "options": [
+        "git label",
+        "git tag",
+        "git mark",
+        "git annotate"
+      ],
+      "answer": "git tag",
+      "explanation": "The 'git tag' command is used to create tags for specific commits."
+    },
+    {
+      "question": "How do you delete a branch locally?",
+      "options": [
+        "git branch -d branch_name",
+        "git delete branch_name",
+        "git remove branch_name",
+        "git branch --delete branch_name"
+      ],
+      "answer": "git branch -d branch_name",
+      "explanation": "The 'git branch -d' command deletes a branch locally."
+    },
+    {
+      "question": "What is the purpose of 'git fetch'?",
+      "options": [
+        "Fetches and merges changes from the remote repository",
+        "Fetches changes from the remote repository without merging",
+        "Uploads changes to the remote repository",
+        "Deletes branches from the remote repository"
+      ],
+      "answer": "Fetches changes from the remote repository without merging",
+      "explanation": "The 'git fetch' command downloads changes from the remote repository without merging them."
+    },
+    {
+      "question": "Which command reverts a commit by creating a new commit?",
+      "options": [
+        "git undo",
+        "git reset",
+        "git revert",
+        "git back"
+      ],
+      "answer": "git revert",
+      "explanation": "The 'git revert' command creates a new commit that undoes the changes of a previous commit."
+    },
+    {
+      "question": "How do you configure your Git username?",
+      "options": [
+        "git config user.name 'Your Name'",
+        "git set user.name 'Your Name'",
+        "git username 'Your Name'",
+        "git config --username 'Your Name'"
+      ],
+      "answer": "git config user.name 'Your Name'",
+      "explanation": "The 'git config user.name' command sets the Git username."
+    },
+    {
+      "question": "Which command lists all branches in the repository?",
+      "options": [
+        "git list",
+        "git branches",
+        "git branch",
+        "git show-branches"
+      ],
+      "answer": "git branch",
+      "explanation": "The 'git branch' command lists all branches in the repository."
+    }
+]

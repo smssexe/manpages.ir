@@ -1,0 +1,176 @@
+[
+    {
+      "question": "What is the default port for HTTP in Apache?",
+      "options": ["443", "80", "8080", "21"],
+      "answer": "80",
+      "explanation": "Port 80 is the default port for HTTP traffic in Apache."
+    },
+    {
+      "question": "Which command checks the Nginx configuration for syntax errors?",
+      "options": ["nginx -s reload", "nginx -t", "nginx -v", "nginx -c"],
+      "answer": "nginx -t",
+      "explanation": "The 'nginx -t' command tests the configuration file for syntax errors."
+    },
+    {
+      "question": "Which Apache module is required to enable SSL?",
+      "options": ["mod_ssl", "mod_rewrite", "mod_proxy", "mod_security"],
+      "answer": "mod_ssl",
+      "explanation": "The 'mod_ssl' module provides SSL and TLS support for Apache."
+    },
+    {
+      "question": "What is the default configuration file for Nginx?",
+      "options": ["/etc/nginx/nginx.conf", "/usr/local/nginx.conf", "/etc/nginx.conf", "/etc/httpd/nginx.conf"],
+      "answer": "/etc/nginx/nginx.conf",
+      "explanation": "Nginx's main configuration file is located at /etc/nginx/nginx.conf."
+    },
+    {
+      "question": "Which directive in Apache disables directory indexing?",
+      "options": ["Options -Indexes", "AllowOverride None", "DirectoryIndex off", "IndexOptions None"],
+      "answer": "Options -Indexes",
+      "explanation": "Using 'Options -Indexes' prevents Apache from listing directory contents."
+    },
+    {
+      "question": "Which command is used to start the Apache service on a systemd-based system?",
+      "options": ["service apache2 start", "apachectl start", "systemctl start apache2", "apache2ctl start"],
+      "answer": "systemctl start apache2",
+      "explanation": "On systemd-based systems, 'systemctl start apache2' starts the Apache service."
+    },
+    {
+      "question": "In Nginx, which directive defines the server name?",
+      "options": ["server_name", "host_name", "domain_name", "site_name"],
+      "answer": "server_name",
+      "explanation": "The 'server_name' directive specifies the domain names that the server block should respond to."
+    },
+    {
+      "question": "Which log file records errors in Apache?",
+      "options": ["access.log", "error.log", "apache.log", "server.log"],
+      "answer": "error.log",
+      "explanation": "Apache records errors in the 'error.log' file."
+    },
+    {
+      "question": "What is the purpose of the 'listen' directive in Nginx?",
+      "options": ["Specifies the server's domain name", "Defines the root directory", "Sets the port and IP address for the server", "Enables SSL"],
+      "answer": "Sets the port and IP address for the server",
+      "explanation": "The 'listen' directive specifies the IP address and port that the server block will respond to."
+    },
+    {
+      "question": "Which command reloads the Nginx configuration without downtime?",
+      "options": ["nginx -s stop", "nginx -s reload", "nginx -t", "nginx -s quit"],
+      "answer": "nginx -s reload",
+      "explanation": "The 'nginx -s reload' command reloads the configuration without stopping the server."
+    },
+    {
+      "question": "In Apache, what does the 'DocumentRoot' directive specify?",
+      "options": ["The location of log files", "The server's hostname", "The directory from which files are served", "The location of configuration files"],
+      "answer": "The directory from which files are served",
+      "explanation": "'DocumentRoot' sets the directory from which Apache serves files."
+    },
+    {
+      "question": "Which Nginx module is used for load balancing?",
+      "options": ["ngx_http_upstream_module", "ngx_http_proxy_module", "ngx_http_ssl_module", "ngx_http_rewrite_module"],
+      "answer": "ngx_http_upstream_module",
+      "explanation": "The 'ngx_http_upstream_module' provides load balancing capabilities in Nginx."
+    },
+    {
+      "question": "What is the default port for HTTPS in Apache?",
+      "options": ["443", "80", "8080", "8443"],
+      "answer": "443",
+      "explanation": "Port 443 is the default port for HTTPS traffic."
+    },
+    {
+      "question": "Which directive in Apache allows URL rewriting?",
+      "options": ["mod_rewrite", "mod_alias", "mod_proxy", "mod_redirect"],
+      "answer": "mod_rewrite",
+      "explanation": "'mod_rewrite' enables URL rewriting capabilities in Apache."
+    },
+    {
+      "question": "In Nginx, which directive is used to define a reverse proxy?",
+      "options": ["proxy_pass", "reverse_proxy", "upstream_pass", "backend_pass"],
+      "answer": "proxy_pass",
+      "explanation": "The 'proxy_pass' directive sets up a reverse proxy in Nginx."
+    },
+    {
+      "question": "Which command stops the Apache service on a systemd-based system?",
+      "options": ["service apache2 stop", "apachectl stop", "systemctl stop apache2", "apache2ctl stop"],
+      "answer": "systemctl stop apache2",
+      "explanation": "On systemd-based systems, 'systemctl stop apache2' stops the Apache service."
+    },
+    {
+      "question": "What is the purpose of the 'ErrorLog' directive in Apache?",
+      "options": ["Specifies the location of the error log file", "Defines custom error pages", "Sets the log level", "Enables error logging"],
+      "answer": "Specifies the location of the error log file",
+      "explanation": "'ErrorLog' sets the path to the error log file in Apache."
+    },
+    {
+      "question": "Which Nginx directive enables gzip compression?",
+      "options": ["gzip on;", "compress on;", "enable_gzip yes;", "gzip_enable true;"],
+      "answer": "gzip on;",
+      "explanation": "The 'gzip on;' directive enables gzip compression in Nginx."
+    },
+    {
+      "question": "In Apache, which directive sets the default page served?",
+      "options": ["DirectoryIndex", "DefaultPage", "IndexFile", "HomePage"],
+      "answer": "DirectoryIndex",
+      "explanation": "'DirectoryIndex' specifies the default file to serve when a directory is requested."
+    },
+    {
+      "question": "Which command displays the version of Nginx installed?",
+      "options": ["nginx -v", "nginx -V", "nginx --version", "nginx -version"],
+      "answer": "nginx -v",
+      "explanation": "The 'nginx -v' command displays the installed Nginx version."
+    },
+    {
+      "question": "What is the main configuration file for Apache?",
+      "options": ["/etc/httpd/conf/httpd.conf", "/etc/apache2/apache2.conf", "/usr/local/apache2/conf/httpd.conf", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Depending on the system, Apache's main configuration file can be located in any of these paths."
+    },
+    {
+      "question": "Which Nginx directive defines the root directory for requests?",
+      "options": ["root", "document_root", "base_dir", "home_dir"],
+      "answer": "root",
+      "explanation": "The 'root' directive specifies the root directory for requests in Nginx."
+    },
+    {
+      "question": "In Apache, which module provides support for virtual hosts?",
+      "options": ["mod_vhost_alias", "mod_virtualhost", "mod_alias", "mod_proxy"],
+      "answer": "mod_vhost_alias",
+      "explanation": "'mod_vhost_alias' provides dynamic configuration of virtual hosts in Apache."
+    },
+    {
+      "question": "Which command reloads the Apache configuration without restarting the service?",
+      "options": ["apachectl reload", "systemctl reload apache2", "service apache2 reload", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "All listed commands can be used to reload Apache's configuration without a full restart."
+    },
+    {
+      "question": "What is the purpose of the 'access_log' in Nginx?",
+      "options": ["Records client requests", "Logs server errors", "Stores configuration changes", "Monitors server uptime"],
+      "answer": "Records client requests",
+      "explanation": "The 'access_log' records all client requests processed by Nginx."
+    },
+    {
+      "question": "In Apache, which directive allows overriding settings in .htaccess files?",
+      "options": ["AllowOverride", "Override", "PermitOverride", "EnableOverride"],
+      "answer": "AllowOverride",
+      "explanation": "'AllowOverride' controls what directives can be overridden by .htaccess files."
+    },
+    {
+      "question": "Which Nginx directive specifies the MIME types?",
+      "options": ["types", "mime_types", "content_types", "file_types"],
+      "answer": "types",
+      "explanation": "The 'types' directive maps file extensions to MIME types in Nginx."
+    },
+    {
+      "question": "What is the default user that Nginx runs as?",
+      "options": ["nginx", "www-data", "apache", "httpd"],
+      "answer": "nginx",
+      "explanation": "By default, Nginx runs as the 'nginx' user for security reasons."
+    },
+    {
+      "question": "In Apache, which directive sets the maximum number of clients?",
+      "options": ["MaxClients", "MaxConnections", "MaxUsers", "ClientLimit"],
+      "answer": "MaxClients",
+      "explanation": "'MaxClients' sets the limit on the number of simultaneous client connections in Apache."
+    }
+]

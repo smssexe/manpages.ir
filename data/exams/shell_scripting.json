@@ -1,0 +1,170 @@
+[
+    {
+      "question": "Which command is used to accept user input in a shell script?",
+      "options": ["input", "read", "get", "accept"],
+      "answer": "read",
+      "explanation": "The 'read' command is used to accept user input in a shell script."
+    },
+    {
+      "question": "What does the 'echo' command do in a shell script?",
+      "options": ["Prints the contents of a file", "Executes a command", "Displays output to the terminal", "Copies files"],
+      "answer": "Displays output to the terminal",
+      "explanation": "The 'echo' command displays the specified text or variables to the terminal."
+    },
+    {
+      "question": "How can a variable be assigned in a Bash script?",
+      "options": ["variable = value", "variable := value", "variable = \"value\"", "variable=\"value\""],
+      "answer": "variable=\"value\"",
+      "explanation": "In Bash, variables are assigned without spaces, e.g., variable=\"value\"."
+    },
+    {
+      "question": "Which symbol is used to represent the 'not equal to' comparison in shell scripting?",
+      "options": ["==", "!=", "<>", "><"],
+      "answer": "!=",
+      "explanation": "The '!=' operator is used to compare two values for inequality in shell scripting."
+    },
+    {
+      "question": "What is the purpose of the 'for' loop in shell scripting?",
+      "options": ["Repeats a command indefinitely", "Executes commands based on conditions", "Iterates through a list of items", "Checks file permissions"],
+      "answer": "Iterates through a list of items",
+      "explanation": "The 'for' loop is used to iterate over a list of items and execute commands for each item."
+    },
+    {
+      "question": "Which command is used to comment multiple lines in a Bash script?",
+      "options": ["/* comment */", "// comment", "# comment", "<!-- comment -->"],
+      "answer": "# comment",
+      "explanation": "In Bash, the '#' symbol is used to comment out lines."
+    },
+    {
+      "question": "What does the 'exit' command do in a shell script?",
+      "options": ["Closes the terminal", "Exits the current loop", "Terminates the script execution", "Restarts the system"],
+      "answer": "Terminates the script execution",
+      "explanation": "The 'exit' command terminates the execution of the script and returns a status code."
+    },
+    {
+      "question": "Which symbol is used for command substitution in shell scripting?",
+      "options": ["{}", "()", "<>", "` `"],
+      "answer": "` `",
+      "explanation": "Backticks are used for command substitution in shell scripting."
+    },
+    {
+      "question": "What does the 'case' statement do in a shell script?",
+      "options": ["Defines constants", "Executes commands based on conditions", "Performs arithmetic operations", "Checks file permissions"],
+      "answer": "Executes commands based on conditions",
+      "explanation": "The 'case' statement allows multi-way branching based on the value of a variable."
+    },
+    {
+      "question": "Which command is used to delete a file in a shell script?",
+      "options": ["rm", "delete", "erase", "del"],
+      "answer": "rm",
+      "explanation": "The 'rm' command is used to remove files or directories in Unix/Linux."
+    },
+    {
+      "question": "In a shell script, how is a function defined?",
+      "options": ["function_name() { }", "define function_name()", "function function_name { }", "func function_name() { }"],
+      "answer": "function_name() { }",
+      "explanation": "Functions in Bash are defined using the syntax: function_name() { commands; }"
+    },
+    {
+      "question": "What does the 'sleep' command do in a shell script?",
+      "options": ["Shuts down the system", "Pauses the script execution for a specified duration", "Displays system uptime", "Checks network connectivity"],
+      "answer": "Pauses the script execution for a specified duration",
+      "explanation": "The 'sleep' command delays the execution of the next command for a specified time."
+    },
+    {
+      "question": "How can command-line arguments be accessed in a shell script?",
+      "options": ["$arg", "$*", "$arguments", "$1, $2, ..."],
+      "answer": "$1, $2, ...",
+      "explanation": "Command-line arguments are accessed using positional parameters like $1, $2, etc."
+    },
+    {
+      "question": "Which command is used to concatenate files in a shell script?",
+      "options": ["concat", "merge", "cat", "append"],
+      "answer": "cat",
+      "explanation": "The 'cat' command is used to concatenate and display the content of files."
+    },
+    {
+      "question": "What does the 'export' command do in a shell script?",
+      "options": ["Deletes a variable", "Sets a variable value", "Imports environment variables", "Makes a variable available to child processes"],
+      "answer": "Makes a variable available to child processes",
+      "explanation": "The 'export' command marks an environment variable to be exported with any newly forked child processes."
+    },
+    {
+      "question": "How can comments spanning multiple lines be written in a shell script?",
+      "options": ["/* comment */", "<!-- comment -->", "# comment", ": ' ... '"],
+      "answer": ": ' ... '",
+      "explanation": "Multi-line comments can be simulated using a colon and single quotes: : ' comment '"
+    },
+    {
+      "question": "What is the purpose of the 'continue' statement in a shell script?",
+      "options": ["Terminates the script", "Skips the current iteration in a loop", "Moves to the next line", "Restarts the script execution"],
+      "answer": "Skips the current iteration in a loop",
+      "explanation": "The 'continue' statement skips the rest of the loop iteration and moves to the next iteration."
+    },
+    {
+      "question": "Which command is used to check the existence of a directory in a shell script?",
+      "options": ["test -f", "check -d", "[ -d ]", "test -d"],
+      "answer": "test -d",
+      "explanation": "The 'test -d' command checks if a directory exists."
+    },
+    {
+      "question": "What is the purpose of the 'grep' command in shell scripting?",
+      "options": ["Search for text patterns in files", "Display disk usage", "Print the current date and time", "Group multiple commands"],
+      "answer": "Search for text patterns in files",
+      "explanation": "The 'grep' command searches for patterns within files."
+    },
+    {
+      "question": "How can a shell script be made executable?",
+      "options": ["chmod +x script.sh", "execute script.sh", "run script.sh", "permit script.sh"],
+      "answer": "chmod +x script.sh",
+      "explanation": "The 'chmod +x' command grants execute permissions to the script file."
+    },
+    {
+      "question": "Which command is used to read a file line by line in a shell script?",
+      "options": ["read", "readfile", "cat", "open"],
+      "answer": "read",
+      "explanation": "The 'read' command can be used in a loop to read a file line by line."
+    },
+    {
+      "question": "What does the 'cut' command do in shell scripting?",
+      "options": ["Cut the first part of a file", "Split files into smaller parts", "Extract specific columns from a file", "Remove content from a file"],
+      "answer": "Extract specific columns from a file",
+      "explanation": "The 'cut' command is used to extract sections from each line of input."
+    },
+    {
+      "question": "In a shell script, how is the output of a command stored into a variable?",
+      "options": ["variable = command", "variable := command", "variable=$(command)", "variable-command"],
+      "answer": "variable=$(command)",
+      "explanation": "Command substitution using $(command) captures the output into a variable."
+    },
+    {
+      "question": "What does the 'shift' command do in a shell script?",
+      "options": ["Moves a file from one directory to another", "Shifts command-line arguments", "Deletes a variable", "Exits the script"],
+      "answer": "Shifts command-line arguments",
+      "explanation": "The 'shift' command shifts the positional parameters to the left."
+    },
+    {
+      "question": "Which symbol is used for string concatenation in shell scripting?",
+      "options": ["&", "+", ".", "%"],
+      "answer": ".",
+      "explanation": "In shell scripting, strings are concatenated by placing them adjacent to each other."
+    },
+    {
+      "question": "What does the 'basename' command do in shell scripting?",
+      "options": ["Prints the working directory", "Displays the base name of a file path", "Deletes a file", "Extracts file permissions"],
+      "answer": "Displays the base name of a file path",
+      "explanation": "The 'basename' command strips the directory and suffix from file names."
+    },
+    {
+      "question": "What is the purpose of the 'trap' command in shell scripting?",
+      "options": ["Terminate the script", "Capture signals and perform specified actions", "Display a message", "Trigger an error"],
+      "answer": "Capture signals and perform specified actions",
+      "explanation": "The 'trap' command specifies commands to execute when the shell receives signals."
+    },
+    {
+      "question": "Which command is used to create a symbolic link in a shell script?",
+      "options": ["ln -s", "symlink", "mklink", "link"],
+      "answer": "ln -s",
+      "explanation": "The 'ln -s' command creates a symbolic link to a file or directory."
+    }
+]
