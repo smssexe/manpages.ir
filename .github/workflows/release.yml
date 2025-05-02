@@ -64,6 +64,8 @@ jobs:
           
     - name: Send Telegram message
       if: always()
+      env:
+        VERSION: v${{ steps.get_tag.outputs.version }}
       run: |
         if [ "${{ job.status }}" = "success" ]; then
           STATUS="✅ Build and Release Successful!"
@@ -71,7 +73,6 @@ jobs:
           STATUS="❌ Build or Release Failed!"
         fi
 
-        VERSION="v${{ steps.get_tag.outputs.version }}"
         REPO="${{ github.repository }}"
         RELEASE_URL="https://github.com/${REPO}/releases/tag/${VERSION}"
         DOCKER_URL="https://hub.docker.com/r/smssexe/manpages.ir/tags"
@@ -81,3 +82,4 @@ jobs:
         curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
           -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
           -d text="$MESSAGE"
+
