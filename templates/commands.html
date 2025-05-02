@@ -1,10 +1,8 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h2>All Available Commands</h2>
 <ul>
-    {% for cmd in commands %}
-        <li><a href="/man/{{ cmd }}">{{ cmd }}</a></li>
+    {% for command in commands %}
+      <li><a href="{{ url_for('man_page', section=command.section, command=command.name) }}">
+        {{ command.name }} ({{ command.section }})
+      </a></li>
     {% endfor %}
-</ul>
-{% endblock %}
+  </ul>
+  

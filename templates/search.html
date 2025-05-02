@@ -11,11 +11,13 @@
 {% if query %}
     <h3>Results for "{{ query }}"</h3>
     {% if results %}
-        <ul>
-        {% for r in results %}
-            <li><a href="/man/{{ r }}?q={{ query }}">{{ r }}</a></li>
+    <ul>
+        {% for result in results %}
+          <li><a href="{{ url_for('man_page', section=result.section, command=result.name) }}">
+            {{ result.name }} ({{ result.section }})
+          </a></li>
         {% endfor %}
-        </ul>
+      </ul>      
     {% else %}
         <p>No results found.</p>
     {% endif %}

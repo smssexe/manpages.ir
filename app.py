@@ -17,26 +17,29 @@ def search():
     query = request.args.get("q", "").lower()
     results = []
     if query:
-        manpages_dir = os.path.join("data", "manpages")
-        for fname in os.listdir(manpages_dir):
-            full_path = os.path.join(manpages_dir, fname)
-            if os.path.isfile(full_path) and fname.endswith(".md"):
-                with open(full_path, encoding="utf-8") as f:
-                    content = f.read().lower()
-                    if query in fname.lower() or query in content:
-                        results.append(fname.replace(".md", ""))
+        base_path = os.path.join("data", "manpages")
+        for root, dirs, files in os.walk(base_path):
+            section = os.path.basename(root)
+            for file in files:
+                if file.endswith(".md") and query in file.lower():
+                    name = file.replace(".md", "")
+                    results.append({"name": name, "section": section})
     return render_template("search.html", query=query, results=results)
+
 
 @app.route('/commands')
 def command_list():
-    manpages_dir = os.path.join("data", "manpages")
     commands = []
-    for f in os.listdir(manpages_dir):
-        full_path = os.path.join(manpages_dir, f)
-        if os.path.isfile(full_path) and f.endswith(".md"):
-            commands.append(f.replace(".md", ""))
-    commands.sort()
+    base_path = os.path.join("data", "manpages")
+    for root, dirs, files in os.walk(base_path):
+        section = os.path.basename(root)
+        for file in files:
+            if file.endswith(".md"):
+                name = file.replace(".md", "")
+                commands.append({"name": name, "section": section})
+    commands.sort(key=lambda x: (x['name'], x['section']))
     return render_template("commands.html", commands=commands)
+
 
 @app.route('/tips')
 def tips_list():
@@ -111,28 +114,14 @@ def tips_by_tag(tag):
     matched.sort(reverse=True)
     return render_template("tips_by_tag.html", tag=tag, dates=matched)
 
-@app.route('/man/<command>')
-def man_page(command):
-    query = request.args.get("q", "").strip().lower()
-    filepath = os.path.join("data", "manpages", f"{command}.md")
+@app.route('/man/<section>/<command>')
+def man_page(section, command):
+    filepath = os.path.join("data", "manpages", section, f"{command}.md")
     if not os.path.isfile(filepath):
         abort(404)
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
-
-    # if has query highlight it
-    if query:
-        import re
-        def highlight(match):
-            return f"<mark>{match.group(0)}</mark>"
-        pattern = re.compile(re.escape(query), re.IGNORECASE)
-        content = pattern.sub(highlight, content)
-
-    # Convert to HTML
-    import markdown
-    html_content = markdown.markdown(content)
-    return render_template("man_md.html", command=command, content=html_content)
-
+    return render_template("man.html", command=command, content=content, section=section)
 
 @app.route("/exams")
 def exams():
