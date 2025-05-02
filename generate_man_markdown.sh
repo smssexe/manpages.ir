@@ -2,7 +2,6 @@
 
 output_dir="all_man_pages_md"
 log_file="$output_dir/errors.log"
-zip_file="all_man_pages_md.zip"
 
 mkdir -p "$output_dir"
 > "$log_file"
@@ -29,8 +28,5 @@ man -k . | awk '{print $1 "|" $2}' | sort -u | while IFS="|" read -r name sectio
     fi
 done
 
-echo "[*] Compressing output to $zip_file..."
-zip -r "$zip_file" "$output_dir" > /dev/null
-
-echo "[✓] Done. Markdown files saved in '$output_dir' and compressed as '$zip_file'"
+echo "[✓] Done. Markdown files saved in '$output_dir'"
 echo "[i] Errors (if any) logged in '$log_file'"
