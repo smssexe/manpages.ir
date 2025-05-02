@@ -59,20 +59,28 @@ jobs:
           
     - name: Send Telegram message
       if: always()
+      env:
+        STATUS: ${{ job.status }}
+        VERSION: v${{ steps.get_tag.outputs.version }}
+        REPO: ${{ github.repository }}
+        ACTOR: ${{ github.actor }}
+        WORKFLOW: ${{ github.workflow }}
+        SHA: ${{ github.sha }}
+        REF: ${{ github.ref_name }}
       run: |
-        STATUS="✅ Build and Release Successful!"
-        if [ "${{ job.status }}" != "success" ]; then
-          STATUS="❌ Build or Release Failed!"
+        if [ "$STATUS" = "success" ]; then
+          STATUS_ICON="✅ Build and Release Successful!"
+        else
+          STATUS_ICON="❌ Build or Release Failed!"
         fi
 
-        VERSION="v${{ steps.get_tag.outputs.version }}"
-        REPO="${{ github.repository }}"
         RELEASE_URL="https://github.com/${REPO}/releases/tag/${VERSION}"
         DOCKER_URL="https://hub.docker.com/r/${REPO,,}/tags"
 
-        MESSAGE="[$STATUS] Repo: ${REPO}%0AWorkflow: ${{ github.workflow }}%0AVersion: ${VERSION}%0ARelease: ${RELEASE_URL}%0ADocker: ${DOCKER_URL}%0ACommit: ${{ github.sha }}%0ABy: ${{ github.actor }}"
+        MESSAGE="[$STATUS_ICON] Repo: ${REPO}%0AWorkflow: ${WORKFLOW}%0AVersion: ${VERSION}%0ARelease: ${RELEASE_URL}%0ADocker: ${DOCKER_URL}%0ACommit: ${SHA}%0ABy: ${ACTOR}"
 
         curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
           -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
           -d text="$MESSAGE"
+
 
