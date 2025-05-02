@@ -23,12 +23,13 @@ jobs:
         latest_tag=$(git tag --sort=-v:refname | grep '^v' | head -n 1)
         echo "Latest tag: $latest_tag"
         if [ -z "$latest_tag" ]; then
-          echo "version=0.0.1" >> $GITHUB_OUTPUT
+          echo "version=0.0.1" >> "$GITHUB_OUTPUT"
         else
           IFS='.' read -r major minor patch <<< "${latest_tag#v}"
           patch=$((patch + 1))
-          echo "version=${major}.${minor}.${patch}" >> $GITHUB_OUTPUT
+          echo "version=${major}.${minor}.${patch}" >> "$GITHUB_OUTPUT"
         fi
+
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
@@ -64,10 +65,14 @@ jobs:
           STATUS="❌ Build or Release Failed!"
         fi
 
-        VERSION="${{ steps.get_tag.outputs.version }}"
+        VERSION="v${{ steps.get_tag.outputs.version }}"
+        REPO="${{ github.repository }}"
+        RELEASE_URL="https://github.com/${REPO}/releases/tag/${VERSION}"
+        DOCKER_URL="https://hub.docker.com/r/${REPO,,}/tags"
 
-        MESSAGE="[$STATUS] Repo: ${{ github.repository }}%0AWorkflow: ${{ github.workflow }}%0ARef: ${{ github.ref_name }}%0AVersion: v$VERSION%0ACommit: ${{ github.sha }}%0ABy: ${{ github.actor }}"
+        MESSAGE="[$STATUS] Repo: ${REPO}%0AWorkflow: ${{ github.workflow }}%0AVersion: ${VERSION}%0ARelease: ${RELEASE_URL}%0ADocker: ${DOCKER_URL}%0ACommit: ${{ github.sha }}%0ABy: ${{ github.actor }}"
 
         curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
           -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
           -d text="$MESSAGE"
+
