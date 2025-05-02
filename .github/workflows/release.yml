@@ -30,7 +30,11 @@ jobs:
           echo "version=${major}.${minor}.${patch}" >> "$GITHUB_OUTPUT"
         fi
     - name: Debug tag output
-      run: echo "VERSION is: ${{ steps.get_tag.outputs.version }}"
+      env:
+        VERSION: ${{ steps.get_tag.outputs.version }}
+      run: |
+        echo "VERSION is: $VERSION"
+
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
@@ -61,8 +65,9 @@ jobs:
     - name: Send Telegram message
       if: always()
       run: |
-        STATUS="✅ Build and Release Successful!"
-        if [ "${{ job.status }}" != "success" ]; then
+        if [ "${{ job.status }}" = "success" ]; then
+          STATUS="✅ Build and Release Successful!"
+        else
           STATUS="❌ Build or Release Failed!"
         fi
 
@@ -76,4 +81,3 @@ jobs:
         curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
           -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
           -d text="$MESSAGE"
-
