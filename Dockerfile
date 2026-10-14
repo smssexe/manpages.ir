@@ -10,7 +10,7 @@ COPY . .
 
 RUN bash generate_man_markdown.sh
 
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 WORKDIR /app
 
